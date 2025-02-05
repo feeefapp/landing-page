@@ -72,3 +72,22 @@ html,body {
         color: white;
     }
 }
+#line1, #line2 {
+    transform-origin: center;
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+.-rotate-45 {
+    transform: rotate(-45deg);
+}
+
+.translate-y-\[6px\] {
+    transform: translateY(6px);
+}
+
+.-translate-y-\[2px\] {
+    transform: translateY(-2px);
+}
