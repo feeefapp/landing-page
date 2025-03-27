@@ -1,49 +1,75 @@
-import "./assets/css/tailwind.css";
+import 'tailwindcss/tailwind.css'
+import './assets/css/tailwind.css'
 
-let switchers = document.querySelectorAll(".switcher");
-
-// Set default to light only if not already set
-if (!localStorage.getItem("color-theme")) {
-  localStorage.setItem("color-theme", "light");
-}
-
-// Apply theme based on storage
-if (localStorage.getItem("color-theme") === "dark") {
-  document.documentElement.classList.add("dark");
-} else {
-  document.documentElement.classList.remove("dark");
-}
-
-switchers.forEach((switcher) => {
-  switcher.addEventListener("click", function () {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("color-theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("color-theme", "dark");
-    }
-  });
-});
-
-// Rest of your existing code for theme toggle and menu
-const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-const themeToggleBtn = document.getElementById('theme-toggle');
-
-const menuBtn = document.getElementById('menu');
-const mobileMenu = document.querySelector('.w-full.h-0.lg\\:w-fit');
-const line1 = document.getElementById('line1');
-const line2 = document.getElementById('line2');
-
-menuBtn.addEventListener('click', function() {
-    // Toggle menu visibility
-    mobileMenu.classList.toggle('h-0');
-    mobileMenu.classList.toggle('h-auto');
+// Theme toggle functionality
+function setupThemeToggle() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
     
-    // Animate hamburger icon
-    line1.classList.toggle('rotate-45');
-    line1.classList.toggle('translate-y-[6px]');
-    line2.classList.toggle('-rotate-45');
-    line2.classList.toggle('-translate-y-[2px]');
+    if (!themeToggleBtn) return;
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Apply the correct theme on page load
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+    
+    // Toggle theme when button is clicked
+    themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+}
+
+// Mobile menu functionality
+function setupMobileMenu() {
+    const menu = document.getElementById('menu');
+    const mobileMenuContent = document.querySelector('.w-full.h-0.lg\\:w-fit');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    
+    if (!menu || !mobileMenuContent || !line1 || !line2) return;
+    
+    let isOpen = false;
+    
+    menu.addEventListener('click', () => {
+        if (isOpen) {
+            mobileMenuContent.classList.add('h-0');
+            mobileMenuContent.classList.remove('h-fit');
+            line1.classList.remove('rotate-45', 'translate-y-[0.35rem]');
+            line2.classList.remove('-rotate-45', '-translate-y-[0.35rem]');
+        } else {
+            mobileMenuContent.classList.remove('h-0');
+            mobileMenuContent.classList.add('h-fit');
+            line1.classList.add('rotate-45', 'translate-y-[0.35rem]');
+            line2.classList.add('-rotate-45', '-translate-y-[0.35rem]');
+        }
+        isOpen = !isOpen;
+    });
+}
+
+// Function to highlight the best value plan
+function setupPlanHighlighting() {
+    const premiumPlan = document.querySelector('.border-primary-500');
+    
+    if (premiumPlan) {
+        // Add a slight pulse animation to draw attention
+        setInterval(() => {
+            premiumPlan.classList.add('scale-105');
+            setTimeout(() => {
+                premiumPlan.classList.remove('scale-105');
+            }, 500);
+        }, 5000);
+    }
+}
+
+// Initialize all functionality
+document.addEventListener('DOMContentLoaded', () => {
+    setupThemeToggle();
+    setupMobileMenu();
+    setupPlanHighlighting();
 });
