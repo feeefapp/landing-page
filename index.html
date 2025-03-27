@@ -638,9 +638,51 @@
                             <div class="swiper-pagination -mb-3 *:!rounded-lg *:!w-14 *:!h-0.5"></div>
                         </div>
                     </div>
+
+                    <!-- Additional Key Features Section -->
+                    <div class="mt-16">
+                        <h3 class="text-2xl text-center text-gray-950 dark:text-white font-semibold mb-12">المزيد من الميزات المتقدمة</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- Feature items will be added here -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <!-- Call to Action Banner Section -->
+        <section class="py-16 bg-gradient-to-r from-primary-600/10 to-primary-500/10 dark:from-primary-900/30 dark:to-primary-800/30">
+            <div class="mx-auto px-6 max-w-5xl">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8 p-8 rounded-[--card-border-radius] bg-white dark:bg-[--card-dark-bg] border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] shadow-lg dark:shadow-gray-900/20">
+                    <div class="text-center md:text-right md:max-w-lg">
+                        <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">جاهز لبدء متجرك الإلكتروني؟</h3>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">انضم إلى آلاف التجار الذين يستخدمون منصة فيف لإدارة متاجرهم بكفاءة وتنمية أعمالهم</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="http://app.feeef.app" class="flex gap-2 items-center justify-center px-6 py-3 text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg shadow-primary-500/20">
+                            <svg class="size-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4H16V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 4L8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 6H4V16H14V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>ابدأ مجانًا</span>
+                        </a>
+                        <a href="#" class="flex gap-2 items-center justify-center px-6 py-3 text-gray-700 dark:text-gray-300 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg transition-all duration-300">
+                            <svg class="size-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 9H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 13H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 9H4.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 13H4.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>تواصل معنا</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
         <section>
             <div class="pt-36">
                 <div class="mx-auto px-6 max-w-6xl text-gray-500">
@@ -2355,7 +2397,7 @@ const product = await ff.products.find("PRODUCT_ID")
 
                     <!-- <form class="mt-12 max-w-xs w-full">
                         <div
-                            class="space-y-2.5 has-[:disabled]:has-[:where(label,span)]:select-none has-[:disabled]:has-[:where(label,span)]:opacity-50 text-gray-950 dark:text-white has-[:disabled]:has-[:where(label,span)]:text-gray-600 dark:has-[:disabled]:has-[:where(label,span)]:text-gray-400">
+                            class="space-y-2.5 has-[:disabled]:has-[:where(label,span)]:select-none has-[:disabled]:has-[:where(labesl,span)]:opacity-50 text-gray-950 dark:text-white has-[:disabled]:has-[:where(label,span)]:text-gray-600 dark:has-[:disabled]:has-[:where(label,span)]:text-gray-400">
                             <label class="block font-medium text-sm" for="email">Subscribe to our newsletter</label>
                             <input
                                 class="w-full focus:outline rounded-[--field-border-radius] appearance-none transition duration-300 peer border shadow focus:outline-2 focus:-outline-offset-1 focus:border-transparent disabled:shadow-none bg-transparent outline-primary-600 shadow-gray-700/5 border-[--field-light-border-color] hover:border-[--field-light-border-hover-color] placeholder-gray-400 text-gray-700 dark:bg-[--field-dark-bg] dark:focus:bg-[--field-dark-focus-bg] dark:outline-primary-500 dark:shadow-gray-950/40 dark:border-[--field-dark-border-color] dark:hover:border-[--field-dark-border-hover-color] dark:placeholder-gray-600 dark:text-white disabled:bg-gray-100 disabled:border-gray-300 disabled:text-gray-400 disabled:placeholder-gray-300 dark:disabled:bg-gray-600/10 dark:disabled:border-gray-600/20 dark:disabled:text-gray-600 dark:disabled:placeholder-gray-700 text-base h-9 px-3"
@@ -2381,7 +2423,194 @@ const product = await ff.products.find("PRODUCT_ID")
         </div>
     </footer>
 
-    <script type="module" src="./main.js"></script>
+    ```html
+        <script type="module" src="./main.js"></script>
+    
+        <section>
+            <div class="pt-28 md:pt-36">
+                <div class="mx-auto px-6 max-w-6xl text-gray-500">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl text-gray-950 dark:text-white font-semibold">ميزات قوية لمتجرك الإلكتروني</h2>
+                        <p class="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+                            توفر منصة فيف كل ما تحتاجه لبدء وتنمية متجرك الإلكتروني بسهولة وسرعة
+                        </p>
+                    </div>
+    
+                    <div class="relative">
+                        <div class="relative z-10 grid gap-6 grid-cols-6">
+                            <div class="col-span-full lg:col-span-2 overflow-hidden flex flex-col relative rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg] hover:shadow-lg transition-shadow duration-300"
+                                style="display: flex;justify-content: end;align-items: end;">
+    
+                                <img src="/assets/elements/laptop-stickers.png?v=1"
+                                    class="ml-auto top-0 right-0 z-0 w-[80%] h-auto transform hover:scale-105 transition-transform duration-300" alt="واجهة قابلة للتخصيص" />
+                                <div class="p-[--card-padding] size-fit relative">
+    
+                                    <h2 class="text-center font-semibold text-gray-950 dark:text-white text-2xl md:text-3xl">
+                                        واجهة قابلة للتخصيص</h2>
+                                    <p class="mt-3 text-center text-gray-600 dark:text-gray-400">خصص المتجر الإلكتروني بحسب علامتك التجارية، الألوان، الشعارات، والتصميم بالكامل</p>
+                                </div>
+                            </div>
+                            <div
+                                class="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-[--card-padding] rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg] hover:shadow-lg transition-shadow duration-300">
+                                <div>
+                                    <div
+                                        class="relative aspect-square rounded-full size-32 flex border mx-auto dark:bg-white/5 dark:border-white/10 before:absolute before:-inset-2 before:border dark:before:border-white/5 dark:before:bg-white/5 before:rounded-full transform hover:rotate-12 transition-transform duration-700">
+                                        <svg class="w-24 m-auto h-fit" viewBox="0 0 212 143" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class="text-gray-400 dark:text-gray-600"
+                                                fill="currentColor" />
+                                            <g clip-path="url(#clip0_0_1)">
+                                            <path class="text-primary-600 dark:text-primary-500" d="M3 72H209"
+                                                stroke="currentColor" stroke-width="6" stroke-linecap="round" />
+                                            <defs>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="mt-6 text-center relative z-10 space-y-2">
+                                        <h2
+                                            class="text-xl font-medium text-gray-800 transition dark:text-white">
+                                            تقنيات حديثة وآمنة</h2>
+                                        <p class="dark:text-gray-300 text-gray-600">
+                                            توفير بيئة عمل آمنة تماماً مع تشفير البيانات والحماية من الاختراقات لضمان أمان معلومات عملائك
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex;justify-content: end;align-items: end;"
+                                class="col-span-full sm:col-span-3 lg:col-span-2 flex-col overflow-hidden relative rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg] hover:shadow-lg transition-shadow duration-300">
+                                <img class="top-0 left-0 z-0 w-[90%] h-auto transform hover:scale-105 transition-transform duration-300" alt="إشعارات في الوقت الفعلي"
+                                    src="/assets/elements/notifications-iphone-example.png?v=1">
+                                <div class="p-[--card-padding] ">
+                                    <div class="hidden pt-6 lg:px-6">
+                                        <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1568.01 322.47"
+                                            style="color: wheat;display:none">
+                                            <defs>
+                                            </defs>
+                                            <g id="Layer_1-2" data-name="Layer_1">
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="text-center relative z-10 space-y-2">
+                                        <h2
+                                            class="text-xl font-medium text-gray-800 transition dark:text-white">
+                                            إشعارات في الوقت الفعلي</h2>
+                                        <p class="dark:text-gray-300 text-gray-600">
+                                            تلقي إشعارات فورية عن الطلبات الجديدة والمنتجات منخفضة المخزون والمبيعات لتبقى على اطلاع دائم
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-span-full lg:col-span-3 overflow-hidden relative p-[--card-padding] rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg] hover:shadow-lg transition-shadow duration-300">
+                                <div class="grid sm:grid-cols-2">
+                                    <div class="flex flex-col justify-between relative z-10 space-y-12 lg:space-y-6">
+                                        <div
+                                            class="relative aspect-square rounded-full size-12 flex border dark:bg-white/5 dark:border-white/10 before:absolute before:-inset-2 before:border dark:before:border-white/5 dark:before:bg-white/5 before:rounded-full transform hover:rotate-45 transition-transform duration-500">
+                                            <svg class="size-6 m-auto text-primary-600" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <h2 class="text-xl font-medium text-gray-800 transition dark:text-white">
+                                                إدارة المخزون المتطورة</h2>
+                                            <p class="dark:text-gray-300 text-gray-600">
+                                                تتبع المخزون وإدارة المنتجات بسهولة، مع تنبيهات آلية عند انخفاض الكمية وتقارير مفصلة عن حركة البضائع
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="relative mt-6 sm:mt-auto h-fit -mb-[calc(var(--card-padding)+1px)] -mr-[calc(var(--card-padding)+1px)] sm:ml-6 py-6 p-6 border rounded-tl-[calc(var(--card-border-radius)-0.5rem)] dark:bg-white/5 dark:border-white/10">
+                                        <div class="absolute flex gap-1 top-2 left-3">
+                                            <span
+                                                class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"></span>
+                                            <span
+                                                class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"></span>
+                                            <span
+                                                class="block size-2 rounded-full border dark:border-white/10 dark:bg-white/10"></span>
+                                        </div>
+                                        <img src="/assets/elements/inventory.png" alt="إدارة المخزون" class="w-full h-auto rounded transform hover:scale-105 transition-transform duration-300" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-span-full lg:col-span-3 overflow-hidden relative p-[--card-padding] rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg] hover:shadow-lg transition-shadow duration-300">
+                                <div class="h-full grid sm:grid-cols-2">
+                                    <div class="flex flex-col justify-between relative z-10 space-y-12 lg:space-y-6">
+                                        <div
+                                            class="relative aspect-square rounded-full size-12 flex border dark:bg-white/5 dark:border-white/10 before:absolute before:-inset-2 before:border dark:before:border-white/5 dark:before:bg-white/5 before:rounded-full hover:shadow-lg hover:shadow-primary-500/20 transition-shadow duration-300">
+                                            <svg class="size-6 m-auto text-primary-600" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="9" cy="7" r="4"></circle>
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <h2 class="text-xl font-medium text-gray-800 transition dark:text-white">
+                                                إدارة فريق العمل</h2>
+                                            <p class="dark:text-gray-300 text-gray-600">
+                                                أضف أعضاء فريقك وامنحهم صلاحيات محددة للعمل معًا بكفاءة وتنظيم المهام بشكل سلس لإدارة متجرك
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-6 relative sm:-mr-[--card-padding] sm:-my-[--card-padding] before:absolute before:w-px before:inset-0 before:mx-auto before:bg-[--ui-light-border-color] dark:before:bg-[--ui-dark-border-color]">
+                                        <div class="relative space-y-6 py-6 flex flex-col justify-center h-full">
+                                            <img src="/assets/elements/team.png" class="mx-auto max-w-[80%] h-auto rounded-lg shadow-lg transform hover:translate-y-[-5px] transition-transform duration-300" alt="إدارة الفريق" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Additional Key Features Section -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl text-center text-gray-950 dark:text-white font-semibold mb-12">المزيد من الميزات المتقدمة</h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Feature 1 -->
+                                <div class="p-6 rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg] hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex items-center mb-4">
+                                        <div class="rounded-full bg-primary-100 dark:bg-primary-900/30 p-3 mr-3">
+                                            <svg class="size-5 text-primary-600 dark:text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <polyline points="12 6 12 12 16 14"></polyline>
+                                            </svg>
+                                        </div>
+                                        <h3 class="text-lg font-medium text-gray-800 dark:text-white">تتبع الطلبات آنياً</h3>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400">تتبع حالة جميع طلباتك في الوقت الفعلي من لحظة الشراء وحتى التسليم، مع تحديثات الحالة المباشرة</p>
+                                </div>
+                                
+                                <!-- Feature 2 -->
+                                <div class="p-6 rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg] hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex items-center mb-4">
+                                        <div class="rounded-full bg-primary-100 dark:bg-primary-900/30 p-3 mr-3">
+                                            <svg class="size-5 text-primary-600 dark:text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                                            </svg>
+                                        </div>
+                                        <h3 class="text-lg font-medium text-gray-800 dark:text-white">متوافق مع الجوال</h3>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400">متجر متوافق تمامًا مع الأجهزة المحمولة، مما يتيح للعملاء تصفح وشراء منتجاتك من أي جهاز</p>
+                                </div>
+                                
+                                <!-- Feature 3 -->
+                                <div class="p-6 rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg] hover:shadow-md transition-shadow duration-300">
+                                    <div class="flex items-center mb-4">
+                                        <div class="rounded-full bg-primary-100 dark:bg-primary-900/30 p-3 mr-3">
+                                            <svg class="size-5 text-primary-600 dark:text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="12" cy="7" r="4"></circle>
+                                            </svg>
+                                        </div>
+                                        <h3 class="text-lg font-medium text-gray-800 dark:text-white">إدارة العملاء</h3>
+                                    </div>
     <div
         class="p-1 rounded-[calc(var(--btn-border-radius)+4px)] bg-gray-950/5 border dark:border-white/10 dark:bg-white/5">
         <a href="http://app.feeef.app"
