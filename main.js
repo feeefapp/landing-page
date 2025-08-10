@@ -69,9 +69,31 @@ function setupPlanHighlighting() {
     }
 }
 
+// Reveal on scroll for nicer entrance animations
+function setupScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+        revealElements.forEach((el) => el.classList.add('show'));
+        return;
+    }
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15 }
+    );
+    revealElements.forEach((el) => observer.observe(el));
+}
+
 // Initialize all functionality
 document.addEventListener('DOMContentLoaded', () => {
     setupThemeToggle();
     setupMobileMenu();
     setupPlanHighlighting();
+    setupScrollReveal();
 });

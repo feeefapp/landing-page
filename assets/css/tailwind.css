@@ -91,3 +91,36 @@ html,body {
 .-translate-y-\[2px\] {
     transform: translateY(-2px);
 }
+
+/* ---- Modern UI utilities ---- */
+.gradient-text {
+    background: linear-gradient(90deg, #10b981, #2563eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@layer components {
+    .glass-card {
+        @apply bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-lg;
+    }
+
+    .cta-primary {
+        @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-white bg-gradient-to-tr from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 shadow-md transition-colors;
+    }
+
+    .cta-secondary {
+        @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100/50 dark:hover:bg-white/10 transition-colors;
+    }
+}
